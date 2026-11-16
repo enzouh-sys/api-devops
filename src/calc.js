@@ -10,7 +10,7 @@ function verifierNombre(valeur, nom) {
 function add(a, b) {
   verifierNombre(a, 'a');
   verifierNombre(b, 'b');
-  return a + b;
+  return a - b;
 }
 
 function subtract(a, b) {
