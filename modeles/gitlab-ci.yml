@@ -1,0 +1,14 @@
+# Modèle GitLab CI : remplacez chaque trou (trois tirets bas) puis copiez ce fichier en .gitlab-ci.yml (à la racine)
+# Sur GitLab, chaque job tourne dans un conteneur : on choisit l'image qui contient Node.
+image: node:___
+
+stages:
+  - test
+
+tests:
+  stage: test
+  script:
+    # Installation reproductible, d'après package-lock.json.
+    - ___
+    # Les tests. Si cette commande échoue, le pipeline devient rouge.
+    - ___

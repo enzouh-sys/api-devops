@@ -1,0 +1,39 @@
+{
+  "name": "api-devops",
+  "version": "1.0.0",
+  "description": "Petite API Express, fil rouge du module INF236 Métier DevOps (CESI).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "cesi",
+    "inf236",
+    "devops"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "yaml": "^2.6.1"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/db.js"
+    ],
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ]
+  }
+}

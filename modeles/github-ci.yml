@@ -1,0 +1,25 @@
+# Modèle GitHub Actions : remplacez chaque trou (trois tirets bas) puis copiez ce fichier en .github/workflows/ci.yml
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      # Récupère le code du dépôt sur la machine temporaire (le "runner").
+      - uses: actions/checkout@v7
+
+      # Installe Node. Même version que sur votre poste : 22.
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ___
+
+      # Installation reproductible, d'après package-lock.json.
+      - run: ___
+
+      # Les tests. Si cette commande échoue, le pipeline devient rouge.
+      - run: ___
